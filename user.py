@@ -163,6 +163,7 @@ async def myexport(event):
         await asyncio.sleep(1.5)
         await jdbot.delete_messages(chat_id, start)
         await jdbot.send_message(chat_id, end)
+        await cmd("otask /jd/scripts/smiek_jd_zdjr.js now") # 组队瓜分京豆团ID更新后自动执行smiek_jd_zdjr.js脚本
     except Exception as e:
         await jdbot.send_message(chat_id, 'something wrong,I\'m sorry\n' + str(e))
         logger.error('something wrong,I\'m sorry\n' + str(e))
